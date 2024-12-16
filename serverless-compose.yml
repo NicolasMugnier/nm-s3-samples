@@ -1,0 +1,9 @@
+services:
+  sample-events:
+    path: sample-events
+
+  sample-queries:
+    path: sample-queries
+
+  sample-website:
+    path: sample-website

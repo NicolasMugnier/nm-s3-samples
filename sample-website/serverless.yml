@@ -1,0 +1,21 @@
+service: sample-website
+
+frameworkVersion: '3'
+
+plugins: []
+
+provider:
+  name: aws
+  region: eu-west-1
+
+resources:
+  Resources:
+    WebsiteBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: nm-sample-website
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: true
+          BlockPublicPolicy: true
+          IgnorePublicAcls: true
+          RestrictPublicBuckets: false

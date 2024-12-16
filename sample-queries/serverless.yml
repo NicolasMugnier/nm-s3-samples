@@ -1,0 +1,23 @@
+service: sample-queries
+
+frameworkVersion: '3'
+
+plugins: []
+
+provider:
+  name: aws
+  region: eu-west-1
+
+functions: {}
+
+resources:
+  Resources:
+    QueryBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: nm-sample-queries
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: true
+          BlockPublicPolicy: true
+          IgnorePublicAcls: true
+          RestrictPublicBuckets: true
